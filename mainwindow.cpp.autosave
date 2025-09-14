@@ -1,0 +1,38 @@
+
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    
+    // Configurar validador para números decimales positivos
+    validator = new QDoubleValidator(0.001, 999999.999, 3, this);
+    validator->setNotation(QDoubleValidator::StandardNotation);
+    
+    // Aplicar validadores a campos de entrada
+    ui->lineEdit_Vrms->setValidator(validator);
+    ui->lineEdit_fase->setValidator(validator);
+    ui->lineEdit_R->setValidator(validator);
+    ui->lineEdit_L->setValidator(validator);
+    ui->lineEdit_C->setValidator(validator);
+    
+    // El campo de fase puede ser negativo
+    QDoubleValidator *faseValidator = new QDoubleValidator(-180.0, 180.0, 2, this);
+    ui->lineEdit_freq->setValidator(faseValidator);
+    
+    // Configurar valores por defecto
+    ui->lineEdit_Vrms->setText("220.0");
+    ui->lineEdit_fase->setText("60.0");
+    ui->lineEdit_freq->setText("0.0");
+    ui->lineEdit_R->setText("100.0");
+    ui->lineEdit_L->setText("159.15"); // Para fr ≈ 60 Hz
+    ui->lineEdit_C->setText("44.21");  // Para fr ≈ 60 Hz
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
