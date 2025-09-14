@@ -42,6 +42,8 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "G:/Proyectos/QT/CircuitoRLC/*.cpp")
 set(OLD_GLOB
   "G:/Proyectos/QT/CircuitoRLC/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+  "G:/Proyectos/QT/CircuitoRLC/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CircuitoRLC_autogen/EWIEGA46WW/moc_mainwindow.cpp"
+  "G:/Proyectos/QT/CircuitoRLC/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CircuitoRLC_autogen/mocs_compilation.cpp"
   "G:/Proyectos/QT/CircuitoRLC/main.cpp"
   "G:/Proyectos/QT/CircuitoRLC/mainwindow.cpp"
   )
@@ -62,6 +64,8 @@ endif()
 # _directory_contents at C:/Qt/6.9.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "G:/Proyectos/QT/CircuitoRLC/*.h")
 set(OLD_GLOB
+  "G:/Proyectos/QT/CircuitoRLC/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CircuitoRLC_autogen/include/ui_mainwindow.h"
+  "G:/Proyectos/QT/CircuitoRLC/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CircuitoRLC_autogen/moc_predefs.h"
   "G:/Proyectos/QT/CircuitoRLC/mainwindow.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
